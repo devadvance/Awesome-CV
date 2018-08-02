@@ -3,8 +3,14 @@
 % Awesome CV LaTeX Template for CV/Resume
 %
 % This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
+% https://github.com/devadvance/Awesome-CV
 %
+% Contributor:
+% Matt Joseph (devadvance) <encryptstream@gmail.com>
+%
+% This is a modified version of the following template:
+% https://github.com/posquit0/Awesome-CV
+% 
 % Author:
 % Claud D. Park <posquit0.bj@gmail.com>
 % http://www.posquit0.com
@@ -18,7 +24,7 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[11pt, letterpaper]{awesome-cv}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -26,10 +32,13 @@
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
+% Reduce hyphenation
+\hyphenpenalty=1000
+
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{awesome-indigo}
 % Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
 
@@ -49,28 +58,11 @@
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
+%	Uses the intro.tex template
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[rectangle,edge,right]{./examples/profile}
-\name{Byungjin}{Park}
-\position{Software Architect{\enskip\cdotp\enskip}Security Expert}
-\address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
-
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \extrainfo{extra informations}
-
-\quote{``Be the change that you want to see in the world."}
-
+\input{resume/intro.tex}
 
 %-------------------------------------------------------------------------------
 \begin{document}
@@ -83,7 +75,7 @@
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Résumé}
+  {John Smith~~~·~~~Resume}
   {\thepage}
 
 
@@ -92,13 +84,15 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{resume/summary.tex}
+\input{resume/projects.tex}
 \input{resume/experience.tex}
-\input{resume/honors.tex}
-\input{resume/presentation.tex}
-\input{resume/writing.tex}
-\input{resume/committees.tex}
+\input{resume/skills.tex}
 \input{resume/education.tex}
 \input{resume/extracurricular.tex}
+\input{resume/honors.tex}
+\input{resume/presentation.tex}
+\input{resume/committees.tex}
+\input{resume/interests.tex}
 
 
 %-------------------------------------------------------------------------------
